@@ -1,0 +1,3 @@
+Browser=chrome
+ChromePath=.\\Drivers\\chromedriver.exe
+Url=https://dev-konnexe.qwinix.io
