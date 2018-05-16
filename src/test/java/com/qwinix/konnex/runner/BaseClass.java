@@ -25,7 +25,9 @@ public class BaseClass
         {
             case "chrome":
                 System.setProperty("webdriver.chrome.driver",config.getChromePath());
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.setHeadless(true);
+                driver = new ChromeDriver(options);
                 break;
             case "firefox":
             	System.setProperty("webdriver.gecko.driver",config.getFirefoxPath());
