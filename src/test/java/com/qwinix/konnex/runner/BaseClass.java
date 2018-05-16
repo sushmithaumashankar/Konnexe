@@ -27,7 +27,7 @@ public class BaseClass
                 System.setProperty("webdriver.chrome.driver",config.getChromePath());
                 ChromeOptions options = new ChromeOptions();
                 options.setHeadless(true);
-                driver = new ChromeDriver(options);
+               WebDriver driver = new ChromeDriver(options);
                 break;
             case "firefox":
             	System.setProperty("webdriver.gecko.driver",config.getFirefoxPath());
