@@ -23,7 +23,8 @@
 		    <configuration>
 		    		<testFailureIgnore>true</testFailureIgnore>
      					 <includes>
-                                <includesFile>**/*test.java</includesFile>
+                                <includesFile>**/*Test.java</includesFile>
+                                <includesFile>**/*Test.java</includesFile>
                        </includes>
     		 <testFailureIgnore>true</testFailureIgnore>
                 </configuration>

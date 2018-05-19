@@ -11,6 +11,7 @@ import com.qwinix.konnex.configReader.ConfigReader;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 public class BaseClass 
@@ -24,10 +25,10 @@ public class BaseClass
         switch (config.getBrowser())
         {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver",config.getChromePath());
-                // ChromeOptions options = new ChromeOptions();
-                // options.setHeadless(true);
-                driver = new ChromeDriver();
+                // System.setProperty("webdriver.chrome.driver",config.getChromePath());
+                ChromeOptions chromeOptions = new ChromeOptions();
+		            	chromeOptions.addArguments("--headless", "window-size=1024,768", "--no-sandbox");
+		                driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
             	System.setProperty("webdriver.gecko.driver",config.getFirefoxPath());
